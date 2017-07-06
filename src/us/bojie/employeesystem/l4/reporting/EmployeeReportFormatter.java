@@ -1,6 +1,6 @@
-package us.bojie.employeesystem.reporting;
+package us.bojie.employeesystem.l4.reporting;
 
-import us.bojie.employeesystem.domain.Employee;
+import us.bojie.employeesystem.l4.domain.Employee;
 
 /**
  * Created by bojiejiang on 7/5/17.

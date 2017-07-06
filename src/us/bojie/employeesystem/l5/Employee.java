@@ -1,4 +1,4 @@
-package us.bojie.employeesystem.domain;
+package us.bojie.employeesystem.l5;
 
 /**
  * Created by bojiejiang on 7/5/17.
@@ -24,37 +24,5 @@ public class Employee {
                 ", department='" + department + '\'' +
                 ", working=" + working +
                 '}';
-    }
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getDepartment() {
-        return department;
-    }
-
-    public void setDepartment(String department) {
-        this.department = department;
-    }
-
-    public boolean isWorking() {
-        return working;
-    }
-
-    public void setWorking(boolean working) {
-        this.working = working;
     }
 }

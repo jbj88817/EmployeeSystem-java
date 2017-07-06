@@ -1,4 +1,4 @@
-package us.bojie.employeesystem.database;
+package us.bojie.employeesystem.l4.database;
 
 /**
  * Created by bojiejiang on 7/5/17.

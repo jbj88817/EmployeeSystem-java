@@ -1,9 +1,10 @@
-package us.bojie.employeesystem.clients;
+package us.bojie.employeesystem.l4.clients;
 
-import us.bojie.employeesystem.domain.dao.EmployeeDAO;
-import us.bojie.employeesystem.domain.Employee;
-import us.bojie.employeesystem.reporting.EmployeeReportFormatter;
-import us.bojie.employeesystem.reporting.FormatType;
+
+import us.bojie.employeesystem.l4.domain.Employee;
+import us.bojie.employeesystem.l4.domain.dao.EmployeeDAO;
+import us.bojie.employeesystem.l4.reporting.EmployeeReportFormatter;
+import us.bojie.employeesystem.l4.reporting.FormatType;
 
 /**
  * Created by bojiejiang on 7/5/17.
