@@ -3,7 +3,7 @@ package us.bojie.employeesystem.l5;
 /**
  * Created by bojiejiang on 7/5/17.
  */
-public class Employee {
+public abstract class Employee {
     private long id;
     private String name;
     private String department;
@@ -15,6 +15,8 @@ public class Employee {
         this.department = department;
         this.working = working;
     }
+
+    public abstract void performDuties();
 
     @Override
     public String toString() {

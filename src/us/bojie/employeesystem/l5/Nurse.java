@@ -9,4 +9,24 @@ public class Nurse extends Employee{
         super(id, name, department, working);
         System.out.println("Nurse is in action...");
     }
+
+    @Override
+    public void performDuties() {
+        checkVitalSigns();
+        drowBlood();
+        cleanPatientArea();
+    }
+
+    // Nurse
+    private void checkVitalSigns() {
+        System.out.println("Checking Vitals");
+    }
+
+    private void drowBlood() {
+        System.out.println("drawing blood");
+    }
+
+    private void cleanPatientArea() {
+        System.out.println("cleaning Patient Area");
+    }
 }
