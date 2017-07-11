@@ -6,10 +6,13 @@ import java.util.List;
 /**
  * Created by bojiejiang on 7/10/17.
  */
-public class EmployeeManagementSystem {
+public class EmployeeManagementSystem implements ISubject {
     private List<IObserver> mIObservers;
     private List<Employee> mEmployees;
     private EmployeeDAO mEmployeeDAO;
+
+    private Employee mEmployee;
+    private String msg;
 
     public EmployeeManagementSystem() {
         mIObservers = new ArrayList<IObserver>();
@@ -25,24 +28,32 @@ public class EmployeeManagementSystem {
         mIObservers.remove(observer);
     }
 
+    public void notifyObservers() {
+        for (IObserver departments : mIObservers) {
+            departments.callMe(mEmployee, msg);
+        }
+    }
+
     public void hireNewEmployee(Employee employee) {
-        mEmployeeDAO.addEmplyee(employee);
-        notifyAllObservers(employee, EventType.NEW_HIRE);
+        mEmployee = employee;
+        msg = "New Hire: ";
+        mEmployees.add(employee);
+        notifyObservers();
     }
 
     public void modifyEmployeeName(int id, String name) {
+        boolean notify = false;
         for (Employee employee : mEmployees) {
             if (id == employee.getEmpoyeeID()) {
                 employee.setName(name);
                 //todo update database
-                notifyAllObservers(employee, EventType.NAME_EDIT);
+                mEmployee = employee;
+                msg = "Name changed: ";
+               notify = true;
             }
         }
-    }
-
-    private void notifyAllObservers(Employee employee, EventType type) {
-        for (IObserver iObserver : mIObservers) {
-            iObserver.callMe(employee, type);
+        if (notify) {
+            notifyObservers();
         }
     }
 }

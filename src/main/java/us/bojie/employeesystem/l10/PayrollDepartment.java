@@ -7,12 +7,8 @@ public class PayrollDepartment implements IObserver {
 
     private static final String TAG = "PayrollDepartment";
 
-    public void callMe(Employee employee, EventType type) {
-        onCallMe(employee, type);
-    }
-
-    private void onCallMe(Employee employee, EventType type) {
+    public void callMe(Employee emp, String msg) {
         System.out.println(TAG + " notified..");
-        Utils.dealWithTypes(employee, type);
+        System.out.println(msg + emp.getName());
     }
 }

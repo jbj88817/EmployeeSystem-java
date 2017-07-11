@@ -1,5 +1,7 @@
 package us.bojie.employeesystem.l10;
 
+import java.util.Date;
+
 /**
  * Created by bojiejiang on 7/10/17.
  */
@@ -14,9 +16,9 @@ public class App {
         ems.registerObserver(payroll);
         ems.registerObserver(hrSystem);
 
-//        Employee bob = new Employee("Bob", new Date(), 35000, true);
-//        ems.hireNewEmployee(bob);
-
-        ems.modifyEmployeeName(5, "Imtiaz");
+        Employee bob = new Employee("Bob", new Date(), 35000, true);
+        ems.hireNewEmployee(bob);
+//
+        ems.modifyEmployeeName(6, "Imtiaz");
     }
 }
